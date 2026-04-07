@@ -1,0 +1,29 @@
+[project]
+name = "paner"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "wiseman-umanah", email = "wisemanumanah@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "chromadb",
+    "groq",
+    "langchain",
+    "langchain-community",
+    "langchain-google-genai>=4.2.1",
+    "platformdirs",
+    "prompt-toolkit",
+    "pyfiglet>=1.0.4",
+    "pymupdf",
+    "rich",
+    "sentence-transformers",
+]
+
+[project.scripts]
+paner = "paner:main"
+
+[build-system]
+requires = ["uv_build>=0.8.5,<0.9.0"]
+build-backend = "uv_build"
