@@ -1,11 +1,12 @@
 [project]
 name = "paner"
 version = "0.1.0"
-description = "Add your description here"
+description = "Terminal PDF analyzer with Groq-powered answers, vector search, and optional web search."
 readme = "README.md"
 authors = [
     { name = "wiseman-umanah", email = "wisemanumanah@gmail.com" }
 ]
+license = { text = "MIT License" }
 requires-python = ">=3.11"
 dependencies = [
     "chromadb",
@@ -13,7 +14,6 @@ dependencies = [
     "duckduckgo-search",
     "langchain",
     "langchain-community",
-    "langchain-google-genai>=4.2.1",
     "platformdirs",
     "prompt-toolkit",
     "pyfiglet>=1.0.4",
@@ -21,9 +21,13 @@ dependencies = [
     "rich",
     "sentence-transformers",
 ]
+keywords = ["cli", "pdf", "rag", "groq", "terminal"]
 
 [project.scripts]
 paner = "paner:main"
+
+[project.urls]
+Homepage = "https://github.com/wiseman-umanah/paner"
 
 [build-system]
 requires = ["uv_build>=0.8.5,<0.9.0"]
