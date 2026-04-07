@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [
     { name = "wiseman-umanah", email = "wisemanumanah@gmail.com" }
 ]
-requires-python = ">=3.14"
+requires-python = ">=3.11"
 dependencies = [
     "chromadb",
     "groq",

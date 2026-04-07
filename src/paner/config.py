@@ -16,7 +16,11 @@ def get_api_key() -> str:
     if config_exists():
         with open(FILE, 'rb') as file:
             loaded_data = pickle.load(file)
-            return (loaded_data.get('key', None))
+            key = loaded_data.get('key', None)
+            valid, msg = test_api_key(key)
+            if not valid:
+                raise ValueError(msg)
+            return key
     else:
         raise FileNotFoundError("No key found")
 
