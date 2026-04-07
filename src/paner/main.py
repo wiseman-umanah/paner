@@ -4,6 +4,7 @@ from rich.console import Console
 from importlib.metadata import version
 import os
 from .paner import Paner
+from .ai import init_client
 from .config import (get_api_key, save_api_key)
 import getpass
 
@@ -34,6 +35,7 @@ def main():
             except ValueError as error:
                 console.print(str(error), style="bold red")
 
+    init_client(api_key)
     Paner().cmdloop()
 
 

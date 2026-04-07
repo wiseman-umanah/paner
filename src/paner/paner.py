@@ -14,6 +14,11 @@ class Paner(cmd.Cmd):
     do_exit = do_quit
     
     def default(self, args):
+        """
+        Prompt handler for all logic and prompting 
+        """
         print(args)
-        return handle_prompt(args)
-
+        response = handle_prompt(args)
+        if response:
+            print(response)
+        return False
