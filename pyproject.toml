@@ -10,6 +10,7 @@ requires-python = ">=3.11"
 dependencies = [
     "chromadb",
     "groq",
+    "duckduckgo-search",
     "langchain",
     "langchain-community",
     "langchain-google-genai>=4.2.1",
